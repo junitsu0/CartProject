@@ -2,6 +2,7 @@ import random
 
 cart = {}
 totalcost = 0
+tax = 0
 
 
 posverbal = ["Perfect choice!", "You have excellent taste!", "How did you get so smart!"]
@@ -73,6 +74,12 @@ S-Mart Options
   
 print("Shop smart. Shop S-Mart!")
 for item in cart:
-    print(item, ":", cart[item][0], ":", cart[item][1])
+    print(f"{item} : {cart[item][0]} : {cart[item][1]}")
     totalcost = cart[item][0] * cart[item][1] + totalcost
-print("$ " + str(totalcost) + " total")
+tax = totalcost * .0625
+grandtotal = tax + totalcost
+print(f"""
+Subtotal: ${totalcost:.2f}
+Tax: ${tax:.2f}
+Total: ${grandtotal:.2f}
+""")
