@@ -57,11 +57,19 @@ while option != 4:
     elif option == 3:
         for item in cart:
             print(item, ":", cart[item][0], ":", cart[item][1])
-            print("That's a lot of quality products! Unless it's empty, then hurry up and buy.")
+        print("That's a lot of quality products! Unless it's empty, then hurry up and buy.")
     elif option != 4: 
         print("Enter a valid number please.")
-
-    option = int(int_input("\n\nPlease choose another option: "))
+        
+    option = print("""
+S-Mart Options
+================
+1. Add Item
+2. Remove Item
+3. View Cart
+4. Checkout
+""")
+    option = int(int_input("Please choose another option: "))
   
 print("Shop smart. Shop S-Mart!")
 for item in cart:
