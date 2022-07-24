@@ -18,6 +18,7 @@ while option != 4:
             print("Item is already in cart")
             qty = int(input("How many would you like to add? "))
             cart[item] += qty
+            print(f"{item} quantity is now {cart[item]}")
         else:
             qty = int(input("Enter the quantity: "))
             cart[item] = qty
@@ -29,15 +30,18 @@ while option != 4:
             if cart[item] <= 0:
                 del(cart[item])
             else:
-                print(f"{item} quantity is now {cart[item]}").title()
+                print(f"{item} quantity is now {cart[item]}")
         else:
             print("I'm sorry, this item is not in your cart.")
     elif option == 3:
         for item in cart:
             print(item, ":", cart[item])
-    elif  option != 4: 
+    elif option != 4: 
         print("Enter a valid number please.")
 
-    option = int(input("\n\nEnter an option: "))
+    option = int(input("\n\nPlease choose another option: "))
+
 else:
     print("Shop smart. Shop S-Mart!")
+    for item in cart:
+        print(item, ":", cart[item])
