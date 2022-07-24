@@ -2,8 +2,6 @@ import random
 
 cart = {}
 totalcost = 0
-tax = 0
-
 
 posverbal = ["Perfect choice!", "You have excellent taste!", "How did you get so smart!"]
 posphrase = random.choice(posverbal)
