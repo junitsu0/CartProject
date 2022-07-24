@@ -22,7 +22,7 @@ option = int(int_input("How can we help you today? "))
 
 while option != 4:   
     if option == 1:
-        item = int_input("Enter an item: ")
+        item = input("Enter an item: ")
         if item in cart:
             print("Item is already in cart")
             qty = int(int_input("How many would you like to add? "))
@@ -30,14 +30,14 @@ while option != 4:
             print(f"{item} quantity is now {cart[item]}")
         else:
             qty = int(int_input("Enter the quantity: "))
-            cost = float(int_input("How much does it cost? "))
+            cost = float(input("How much does it cost? "))
             cart[item] = [qty, cost]
     elif option == 2:
-        item = int_input("Enter an item: ")
+        item = input("Enter an item: ")
         if item in cart:
             qty = int(int_input("How many would you like to remove? "))
-            cart[item] -= qty
-            if cart[item] <= 0:
+            cart[item][0] -= qty
+            if cart[item][0] <= 0:
                 del(cart[item])
             else:
                 print(f"{item} quantity is now {cart[item]}")
